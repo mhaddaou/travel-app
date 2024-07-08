@@ -51,11 +51,12 @@ export default function Home(){
                 </TouchableOpacity>
             </View>
             <CategoriesBotton onCategoryChanged={onCatChanged}/>
-            <Listnings DATA={data}/>
+            <Listnings DATA={data} category={category}/>
+
             
         </View>
         </>
     )
 }
 
-// exp://ahdydeq-anonymous-8081.exp.direct
+// exp://z9wlmea-anonymous-8081.exp.direct
