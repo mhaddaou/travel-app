@@ -8,6 +8,7 @@ import CategoriesBotton from "@/components/CategoriesButton";
 import { useState } from "react";
 import Listnings from "@/components/listnings";
 import data from "@/data/destinations.json"
+import Groups from "@/components/groups";
 
 
 export default function Home(){
@@ -39,24 +40,26 @@ export default function Home(){
             )
         }} />
         <View className="" style={{paddingTop: headerHeight, paddingHorizontal:20, backgroundColor: Colors.bgColor}}>
-            <Text className="text-3xl leading-10 font-bold capitalize text-center italic">explor the beutifull World </Text>
-            <View className="w-full flex flex-row  pt-4 ">
+            <Text className="text-2xl leading-10 font-bold capitalize text-center italic">explor the beutifull World </Text>
+            <View className="w-full flex flex-row  pt-3 ">
                 <View className=" flex flex-row bg-white px-4 flex-1 mr-4  rounded-lg items-center">
                     <Ionicons  name="search" size={24} color={'gray'}/>
                     <TextInput className="ml-2 flex-1" placeholder="Search..." autoCorrect={false} />
 
                 </View>
-                <TouchableOpacity className=" p-3 rounded-md" style={{backgroundColor: Colors.primaryColor}}>
-                    <Ionicons name="options" size={28} color={Colors.white} />
+                <TouchableOpacity className=" p-2 rounded-md" style={{backgroundColor: Colors.primaryColor}}>
+                    <Ionicons name="options" size={24} color={Colors.white} />
                 </TouchableOpacity>
             </View>
             <CategoriesBotton onCategoryChanged={onCatChanged}/>
             <Listnings DATA={data} category={category}/>
-
+            <Groups/>
             
         </View>
+
+
         </>
     )
 }
 
-// exp://z9wlmea-anonymous-8081.exp.direct
+// exp://jn6uvq0-anonymous-8081.exp.direct

@@ -14,18 +14,24 @@ type renderType = {
 };
 
 
-const filtringData = () => {
-  
+const filtringData = ({DATA, category} : Props) => {
+  if(category === 'All')
+    return DATA;
+
+  return DATA.filter((item) =>{
+    return (item.category == category )
+  })  
 }
 
 const Listnings = ({ DATA, category }: Props) => {
+  const [data, setData] = useState<ListningType[]>([])
   const [loading, setLoading] = useState(false);
 
   useEffect(() =>{
     setLoading(true);
-    setTimeout(() =>{
-      setLoading(false);
-    }, 300)
+    setData(filtringData({DATA, category}));
+    setLoading(false);
+    
 
   },[category])
 
@@ -72,7 +78,7 @@ const Listnings = ({ DATA, category }: Props) => {
   return (
     <View className="mt-6">
       <FlatList
-        data={loading ? [] : DATA}
+        data={data}
         renderItem={renderItem}
         horizontal
         showsHorizontalScrollIndicator={false}

@@ -26,7 +26,7 @@ const CategoriesBotton = ({onCategoryChanged} : Props) =>{
 
     return (
         <View className="pt-5  ">
-            <Text className="font-bold text-2xl  tracking-wider">Categories</Text>
+            <Text className="font-bold text-xl  tracking-wider">Categories</Text>
             <ScrollView horizontal 
             ref={scrollRef}
             showsHorizontalScrollIndicator={false}>
