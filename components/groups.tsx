@@ -18,6 +18,7 @@ const Groups = () =>{
                     <Ionicons  name="star" color={Colors.primaryColor} size={16} />
                     <View className="flex flex-row">
                     <Text>{item.rating}</Text>
+                    
                     <Text className="text-xs text-gray-500"> ({item.reviews})</Text>
                     </View>
                     </View>
